@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quickly Video</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <div class="title-row">
+        <div>
+          <h1>视频加速</h1>
+          <p id="statusText">已关闭</p>
+        </div>
+        <label class="switch" aria-label="开启视频加速">
+          <input id="speedToggle" type="checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <section class="speed-control" aria-labelledby="speedLabel">
+        <div class="speed-row">
+          <label id="speedLabel" for="speedRange">倍速</label>
+          <strong id="speedValue">4x</strong>
+        </div>
+        <input id="speedRange" type="range" min="2" max="16" step="2" value="4">
+        <div class="marks" aria-hidden="true">
+          <span>2</span>
+          <span>4</span>
+          <span>6</span>
+          <span>8</span>
+          <span>10</span>
+          <span>12</span>
+          <span>14</span>
+          <span>16</span>
+        </div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

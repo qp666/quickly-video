@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Quickly Video",
+  "version": "1.0.0",
+  "description": "Toggle 4x playback speed for videos on the current web page.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Quickly Video",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
